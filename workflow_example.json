@@ -1,0 +1,16 @@
+{
+  "Comment": "Exemplo de workflow Step Functions",
+  "StartAt": "PrimeiraTarefa",
+  "States": {
+    "PrimeiraTarefa": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:REGIAO:ID_DA_CONTA:function:MinhaLambda",
+      "Next": "SegundaTarefa"
+    },
+    "SegundaTarefa": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:REGIAO:ID_DA_CONTA:function:MinhaSegundaLambda",
+      "End": true
+    }
+  }
+}
